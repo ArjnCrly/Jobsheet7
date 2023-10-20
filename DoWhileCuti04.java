@@ -6,26 +6,29 @@ public class DoWhileCuti04 {
         int jatahCuti, jumlahHari;
         String konfirmasi;
 
-        System.out.print("Jatah Cuti: ");
+        System.out.p12rint("Jatah Cuti: ");
         jatahCuti = scan.nextInt();
 
         do {
         System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
         konfirmasi = scan.next();
 
-        if (konfirmasi.equalsIgnoreCase("y")) {
-        System.out.print("Jumlah Hari: ");
-        jumlahHari = scan.nextInt();
+        if (konfirmasi.equalsIgnoreCase("t"))
+        break;
 
-            if (jumlahHari <= jatahCuti) {
-            jatahCuti -= jumlahHari;
-            System.out.println("Sisa jatah cuti: " + jatahCuti);
-            } else {
-            System.out.println("Sisa jatah cuti anda tidak mencukupi");
+            else if (konfirmasi.equalsIgnoreCase("y")) {
+            System.out.print("Jumlah Hari: ");
+            jumlahHari = scan.nextInt();
+
+                if (jumlahHari <= jatahCuti) {
+                jatahCuti -= jumlahHari;
+                System.out.println("Sisa jatah cuti: " + jatahCuti);
+                } else {
+                System.out.println("Sisa jatah cuti anda tidak mencukupi");
                 System.out.print("Apakah anda ingin mengambil cuti (y/t) : ");
                 konfirmasi = scan.next();
                 
-                if (konfirmasi.equalsIgnoreCase("y")) {
+                    if (konfirmasi.equalsIgnoreCase("y")) {
                     System.out.print("Jumlah hari: ");
                     jumlahHari = scan.nextInt();
 
